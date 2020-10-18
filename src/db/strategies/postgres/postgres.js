@@ -1,6 +1,7 @@
 const ICrud = require('../interfaces/interfaceCrud')
 const Sequelize = require('sequelize')
 
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 class Postgres extends ICrud {
   constructor(connection, schema) {
     super()
