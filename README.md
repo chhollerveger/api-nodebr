@@ -72,3 +72,14 @@ docker exec -it mongodb \
   git remote -v
   heroku logs
   git add . && git commit -m "v1" && git push heroku master 
+
+## ---- pm2
+  npm i pm2 -g
+  pm2 start --name heroi -i 10 src/api.js
+  pm2 monnit
+  pm2 kill
+  PM2_PUBLIC_KEY: uyh4pe9ysbuhgta
+  PM2_SECRET_KEY: 7dy32g4xobr7ibn
+
+## ---- coverage nyc
+  npm i --save-dev nyc

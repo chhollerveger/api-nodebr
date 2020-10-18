@@ -119,8 +119,6 @@ describe('Suite de testes da API', function () {
       url: `/herois/${_id}`,
       payload: { poder: 'Super Mira' }
     })
-
-    console.log('MOCK_ID', MOCK_ID)
   
     const dados = JSON.parse(result.payload)
     const statusCode = result.statusCode
