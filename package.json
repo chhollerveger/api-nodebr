@@ -1,0 +1,33 @@
+{
+  "name": "multi-db",
+  "version": "1.0.0",
+  "description": "docker run \\   --name adminer \\   -p 8080:8080 \\   --link postgres:postgres \\   -d \\   adminer",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/tests/*.js",
+    "test:prod": "cross-env NODE_ENV=prod npm test",
+    "prod": "cross-env NODE_ENV=prod node api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^16.1.8",
+    "@hapi/vision": "^6.0.0",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "hapi-auth-jwt2": "^8.1.0",
+    "hapi-swagger": "^13.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.20",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3"
+  }
+}
