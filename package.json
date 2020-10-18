@@ -4,6 +4,8 @@
   "description": "docker run \\   --name adminer \\   -p 8080:8080 \\   --link postgres:postgres \\   -d \\   adminer",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm i -g pm2",
+    "postinstall": "npm run test:prod",
     "test": "nyc --reporter=html mocha --timeout 10000 --exit src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm test",
     "prod": "cross-env NODE_ENV=prod pm2-runtime src/api.js"
