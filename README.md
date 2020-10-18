@@ -70,3 +70,5 @@ docker exec -it mongodb \
   heroku apps:create api-nodebr
   heroku git:remote --app api-nodebr
   git remote -v
+  heroku logs
+  git add . && git commit -m "v1" && git push heroku master 
