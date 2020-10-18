@@ -1,3 +1,18 @@
+## API-NODEBR
+
+API desenvolvida no curso de Imersão em desenvolvimento de APIs com Node.js By #NodeBR!
+
+#### Dependencias
+
+- **docker**;
+- **npm**;
+- **node**;
+
+## ---- SWAGGER
+
+  http://localhost:5000/documentation#/
+  https://api-nodebr.herokuapp.com//documentation#/
+
 ## ---- POSTGRESS
 docker run \
   --name postgres \
@@ -55,10 +70,6 @@ docker exec -it mongodb \
   inciar os containers pelo id:
   docker start :id
 
-## ---- SWAGGER
-
-  http://localhost:5000/documentation#/
-
 ## ---- JWT
   npm i jsonwebtoken
   npm i hapi-auth-jwt2
@@ -83,3 +94,5 @@ docker exec -it mongodb \
 
 ## ---- coverage nyc
   npm i --save-dev nyc
+  http://localhost:4000/coverage/
+  https://api-nodebr.herokuapp.com/coverage/
