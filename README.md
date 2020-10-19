@@ -10,8 +10,8 @@ API desenvolvida no curso de Imersão em desenvolvimento de APIs com Node.js By 
 
 ## ---- SWAGGER
 
-  http://localhost:5000/documentation#/
-  https://api-nodebr.herokuapp.com//documentation#/
+  - http://localhost:5000/documentation#/
+  - https://api-nodebr.herokuapp.com//documentation#/
 
 ## ---- POSTGRESS
 docker run \
@@ -59,40 +59,40 @@ docker exec -it mongodb \
   --eval "db.getSiblingDB('herois').createUser({user: 'carloshollerveger', pwd: 'senhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
 
 ## ---- CASE CONFLICT
-  docker rm $(docker ps -aq)
+  - docker rm $(docker ps -aq)
 
   rodar comandos acima
 
 ## ---- RODAR CONTAINERS JÁ CRIADOS
  listar os containers:
-  docker ps -a
+  - docker ps -a
 
   inciar os containers pelo id:
-  docker start :id
+  - docker start :id
 
 ## ---- JWT
-  npm i jsonwebtoken
-  npm i hapi-auth-jwt2
+  - npm i jsonwebtoken
+  - npm i hapi-auth-jwt2
 
 ## ---- HEROKU
-  npm i -g heroku
-  heroku login
-  heroku apps:list
-  heroku apps:create api-nodebr
-  heroku git:remote --app api-nodebr
-  git remote -v
-  heroku logs
-  git add . && git commit -m "v1" && git push heroku master 
+  - npm i -g heroku
+  - heroku login
+  - heroku apps:list
+  - heroku apps:create api-nodebr
+  - heroku git:remote --app api-nodebr
+  - git remote -v
+  - heroku logs
+  - git add . && git commit -m "v1" && git push heroku master 
 
 ## ---- pm2
-  npm i pm2 -g
-  pm2 start --name heroi -i 10 src/api.js
-  pm2 monnit
-  pm2 kill
-  PM2_PUBLIC_KEY: uyh4pe9ysbuhgta
-  PM2_SECRET_KEY: 7dy32g4xobr7ibn
+  - npm i pm2 -g
+  - pm2 start --name heroi -i 10 src/api.js
+  - pm2 monnit
+  - pm2 kill
+  - PM2_PUBLIC_KEY: uyh4pe9ysbuhgta
+  - PM2_SECRET_KEY: 7dy32g4xobr7ibn
 
 ## ---- coverage nyc
-  npm i --save-dev nyc
-  http://localhost:4000/coverage/
-  https://api-nodebr.herokuapp.com/coverage/
+  - npm i --save-dev nyc
+  - http://localhost:4000/coverage/
+  - https://api-nodebr.herokuapp.com/coverage/
