@@ -8,12 +8,12 @@ API desenvolvida no curso de Imersão em desenvolvimento de APIs com Node.js By 
 - **npm**;
 - **node**;
 
-## ---- SWAGGER
+#### SWAGGER
 
   - http://localhost:5000/documentation#/
   - https://api-nodebr.herokuapp.com//documentation#/
 
-## ---- POSTGRESS
+#### POSTGRESS
 docker run \
   --name postgres \
   -e POSTGRES_USER=carloshollerveger \
@@ -25,7 +25,7 @@ docker run \
 
 docker ps
 
-## ---- MONGODB
+#### MONGODB
 docker run \
   --name mongodb \
   -p 27017:27017 \
@@ -43,7 +43,7 @@ docker run \
   -d \
   mongoclient/mongoclient
 
-## ---- ADMINER
+#### ADMINER
 docker run \
   --name adminer \
   -p 8080:8080 \
@@ -53,28 +53,28 @@ docker run \
 
 docker ps
 
-## ---- CREATE USER MONGODB
+#### CREATE USER MONGODB
 docker exec -it mongodb \
   mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
   --eval "db.getSiblingDB('herois').createUser({user: 'carloshollerveger', pwd: 'senhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
 
-## ---- CASE CONFLICT
+#### CASE CONFLICT
   - docker rm $(docker ps -aq)
 
   rodar comandos acima
 
-## ---- RODAR CONTAINERS JÁ CRIADOS
+#### RODAR CONTAINERS JÁ CRIADOS
  listar os containers:
   - docker ps -a
 
   inciar os containers pelo id:
   - docker start :id
 
-## ---- JWT
+#### JWT
   - npm i jsonwebtoken
   - npm i hapi-auth-jwt2
 
-## ---- HEROKU
+#### HEROKU
   - npm i -g heroku
   - heroku login
   - heroku apps:list
@@ -84,7 +84,7 @@ docker exec -it mongodb \
   - heroku logs
   - git add . && git commit -m "v1" && git push heroku master 
 
-## ---- pm2
+#### pm2
   - npm i pm2 -g
   - pm2 start --name heroi -i 10 src/api.js
   - pm2 monnit
@@ -92,7 +92,7 @@ docker exec -it mongodb \
   - PM2_PUBLIC_KEY: uyh4pe9ysbuhgta
   - PM2_SECRET_KEY: 7dy32g4xobr7ibn
 
-## ---- coverage nyc
+#### coverage nyc
   - npm i --save-dev nyc
   - http://localhost:4000/coverage/
   - https://api-nodebr.herokuapp.com/coverage/
